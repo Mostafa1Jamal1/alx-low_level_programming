@@ -10,3 +10,5 @@ This is a description for the files in this project
 
 4-print_alphabt.c > It is a C source code for a program that prints the alphabet in lowercase,followed by a new line. Print all the letters except q and e .
 
+5-print_numbers.c > It is a C source code for a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+
