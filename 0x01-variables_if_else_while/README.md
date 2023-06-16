@@ -17,3 +17,5 @@ This is a description for the files in this project
 - You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
 - You can only use putchar twice in your code
 
+7-print_tebahpla.c > It is a C source code for a program that prints the lowercase alphabet in reverse, followed by a new line.
+
