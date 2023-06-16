@@ -28,3 +28,5 @@
 - The C file name will be saved in the variable $CFILE.
 - The output file should be named the same as the C file, but with the extension .s instead of .c.
 - Example: if the C file is main.c, the output file should be main.s
+
+101-quote.c > is a C program that prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
