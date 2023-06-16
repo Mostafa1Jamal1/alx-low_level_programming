@@ -7,4 +7,6 @@ This is a description for the files in this project
 2-print_alphabet.c > It is a C source code for a program that prints the alphabet in lowercase, followed by a new line.
 
 3-print_alphabets.c > It is a C source code for a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
- 
+
+4-print_alphabt.c > It is a C source code for a program that prints the alphabet in lowercase,followed by a new line. Print all the letters except q and e .
+
