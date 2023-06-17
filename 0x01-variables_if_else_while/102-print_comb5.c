@@ -27,7 +27,7 @@ int main(void)
 			n2_1 = n1_1;
 			while (n2_1 <= 57)
 			{
-				n2_2 = n1_2 + 1;
+				n2_2 = n1_2;
 				while (n2_2 <= 57)
 				{
 					putchar(n1_1);
