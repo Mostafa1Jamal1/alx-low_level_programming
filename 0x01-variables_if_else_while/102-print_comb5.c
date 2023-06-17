@@ -13,40 +13,29 @@
  */
 int main(void)
 {
-	int n1_1;
-	int n1_2;
-	int n2_1;
-	int n2_2;
+	int n1, n2, n3, n4;
 
-	n1_1 = 48;
-	while (n1_1 <= 57)
+	for (n1 = 48; n1 <= 57; n1++)
 	{
-		n1_2 = 48;
-		while (n1_2 <= 57)
+		for (n2 = 48; n2 <= 56; n2++)
 		{
-			n2_1 = n1_1;
-			while (n2_1 <= 57)
+			for (n3 = n1; n3 <= 57; n3++)
 			{
-				n2_2 = n1_2;
-				while (n2_2 <= 57)
+				for (n4 = n2 + 1; n4 <= 57; n4++)
 				{
-					putchar(n1_1);
-					putchar(n1_2);
+					putchar(n1);
+					putchar(n2);
 					putchar(' ');
-					putchar(n2_1);
-					putchar(n2_2);
-					if ((n1_1 + n1_2 + n2_1 + n2_2) != 227)
+					putchar(n3);
+					putchar(n4);
+					if ((n1 + n2 + n3 + n4) != 227)
 					{
 						putchar(',');
 						putchar(' ');
 					}
-					n2_2++;
 				}
-				n2_1++;
 			}
-			n1_2++;
 		}
-		n1_1++;
 	}
 	putchar('\n');
 	return (0);
