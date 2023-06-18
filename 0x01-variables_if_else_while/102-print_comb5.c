@@ -27,9 +27,9 @@ int main(void)
 					{
 						n3 = n1;
 						n4 = n2 + 1;
-						if (n4 == 58)
-							break;
 					}
+					if (n4 == 58)
+						break;
 					putchar(n1);
 					putchar(n2);
 					putchar(' ');
