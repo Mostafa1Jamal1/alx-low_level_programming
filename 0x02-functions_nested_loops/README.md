@@ -30,3 +30,7 @@ so let's start :-
 6-abs.c > is a source code for a function that computes the absolute value of an integer.
 - Prototype: int _abs(int);
 
+7-print_last_digit.c > is a source code for a function that prints the last digit of a number.
+- Prototype: int print_last_digit(int);
+- Returns the value of the last digit
+
