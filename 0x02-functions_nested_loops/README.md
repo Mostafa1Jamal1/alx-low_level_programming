@@ -7,3 +7,7 @@ so let's start :-
 - Prototype: void print_alphabet(void);
 - Used _putchar only twice in the code
 
+2-print_alphabet_x10.c > is a source code for a function that prints 10 times the alphabet, in lowercase, followed by a new line.
+- Prototype: void print_alphabet_x10(void);
+- Used _putchar only twice in the code
+
