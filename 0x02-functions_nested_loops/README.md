@@ -3,3 +3,7 @@ so let's start :-
 
 0-putchar.c > is a source code for a program that prints _putchar, followed by a new line.
 
+1-alphabet.c > is a source code for a function that prints the alphabet, in lowercase, followed by a new line.
+- Prototype: void print_alphabet(void);
+- Used _putchar only twice in the code
+
