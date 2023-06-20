@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_alphabet - is a function that prints the alphabet 10 times
+ * print_alphabet_x10 - is a function that prints the alphabet 10 times
  * in lowercase
  * followed by a new line.
  *
  * main.h must be included to use this function
  *
  */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int c;
 	int i;
@@ -17,8 +17,8 @@ void print_alphabet(void)
 	{
 		for (c = 97; c < 123; c++)
 		{
-		_putchar(c);
-		_putchar('\n');
+			_putchar(c);
 		}
+		_putchar('\n');
 	}
 }
