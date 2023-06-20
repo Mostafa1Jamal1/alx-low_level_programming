@@ -1,0 +1,5 @@
+This is the files and source code files descriptions, this files required to pass the tasks of ALX-SE program
+so let's start :-
+
+0-putchar.c > is a source code for a program that prints _putchar, followed by a new line.
+
