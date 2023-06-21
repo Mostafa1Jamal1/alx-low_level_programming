@@ -18,13 +18,15 @@ int main(void)
 	long t;
 	int i;
 
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i <= 48; i++)
 	{
 		if (x == 1)
 		{
 			printf("%ld, ", x);
 		}
-		printf("%ld, ", y);
+		printf("%ld", y);
+		if (i != 48)
+			printf(", ");
 		t = y;
 		y = x + y;
 		x = t;
