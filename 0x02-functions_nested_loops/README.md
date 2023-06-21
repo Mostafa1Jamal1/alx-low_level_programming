@@ -63,3 +63,5 @@ so let's start :-
 - The numbers must be separated by comma, followed by a space , 
 - You are allowed to use the standard library
 
+103-fibonacci.c > is a source code for a program that finds and prints the sum of the even-valued terms, of the Fibonacci sequence whose values do not exceed 4,000,000 followed by a new line.
+
