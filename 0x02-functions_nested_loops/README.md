@@ -65,3 +65,11 @@ so let's start :-
 
 103-fibonacci.c > is a source code for a program that finds and prints the sum of the even-valued terms, of the Fibonacci sequence whose values do not exceed 4,000,000 followed by a new line.
 
+104-fibonacci.c > is a source code for a program that finds and prints the first 98 Fibonacci numbers, starting with 1 and 2, followed by a new line.
+
+- The numbers should be separated by comma, followed by a space ,
+- Allowed to use the standard library
+- Not allowed to use any other library (You can’t use GMP etc…)
+- Not allowed to use long long, malloc, pointers, arrays/tables, or structures
+- Not allowed to hard code any Fibonacci number (except for 1 and 2)
+
