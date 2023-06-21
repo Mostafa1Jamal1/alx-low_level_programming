@@ -19,7 +19,7 @@ void times_table(void)
 			{
 				_putchar((xmy / 10) + '0');
 			}
-			else
+			else if (y != 0)
 			{
 				_putchar(' ');
 			}
