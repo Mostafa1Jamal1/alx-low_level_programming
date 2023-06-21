@@ -23,6 +23,10 @@ int main(void)
 	{
 		sum = sum + i;
 	}
+	for (i = 15; i < 1024; i = i + 15)
+	{
+		sum = sum - i;
+	}
 	printf("%d\n", sum);
 	return (0);
 }
