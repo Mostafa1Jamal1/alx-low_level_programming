@@ -13,3 +13,5 @@ The project is about leaning how to test and debugging different codes I think.
 
 - 2-largest_number.c > is a source code for a function that return with the largest of three integers.
 
+- 3-print_remaining_days.c > is a source code for a function that takes a date and prints how many days are left in the year, taking leap years into account.
+
