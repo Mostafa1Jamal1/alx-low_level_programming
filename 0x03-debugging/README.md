@@ -11,3 +11,5 @@ The project is about leaning how to test and debugging different codes I think.
 
 - 1-main.c > is a source code for a program to demonistrate the infint loop error
 
+- 2-largest_number.c > is a source code for a function that return with the largest of three integers.
+
