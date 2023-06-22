@@ -17,7 +17,7 @@ int main(void)
 	unsigned long x = 1;
 	unsigned long y = 2;
 	unsigned long t;
-	int num_fib = 100;
+	int num_fib = 98;
 	int i;
 
 	for (i = y; i <= num_fib; i++)
