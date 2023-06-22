@@ -13,3 +13,6 @@ main.h > is a header file that contains all the prototypes of the functions crea
 - Returns 1 if c is a digit
 - Returns 0 otherwise
 
+2-mul.c > is a source code file of a function that multiplies two integers.
+- Prototype: int mul(int a, int b);
+
