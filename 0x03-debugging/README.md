@@ -9,3 +9,5 @@ The project is about leaning how to test and debugging different codes I think.
 
 - 0-main.c > is a source code for a program that test that the function positive_or_negative() gives the correct output when given a case of 0.
 
+- 1-main.c > is a source code for a program to demonistrate the infint loop error
+
