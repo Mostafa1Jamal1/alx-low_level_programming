@@ -8,3 +8,8 @@ main.h > is a header file that contains all the prototypes of the functions crea
 - Returns 1 if c is uppercase
 - Returns 0 otherwise
 
+1-isdigit.c > is a source code file of a function that checks for a digit (0 through 9).
+- Prototype: int _isdigit(int c);
+- Returns 1 if c is a digit
+- Returns 0 otherwise
+
