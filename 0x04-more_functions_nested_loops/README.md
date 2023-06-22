@@ -25,3 +25,7 @@ main.h > is a header file that contains all the prototypes of the functions crea
 - Do not print 2 and 4
 - You can only use _putchar twice in your code
 
+5-more_numbers.c > is a source code file of a function that prints 10 times the numbers, from 0 to 14, followed by a new line.
+- Prototype: void more_numbers(void);
+- You can only use _putchar three times in your code
+
