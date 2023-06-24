@@ -65,4 +65,10 @@ main.h > is a header file that contains all the prototypes of the functions crea
 - The program compiled with this command: gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-prime_factor.c -o 100-prime_factor -lm 
 And showed no errors
 
+101-print_number.c > is a source code file of a function that prints an integer.
+- Prototype: void print_number(int n);
+- You can only use _putchar function to print
+- You are not allowed to use long
+- You are not allowed to use arrays or pointers
+- You are not allowed to hard-code special values
 
