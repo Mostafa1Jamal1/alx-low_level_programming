@@ -18,3 +18,6 @@ Dscription of the files in this directory
 4-print_rev.c > is a cource cod of a function that prints a string, in reverse, followed by a new line.
 - Prototype: void print_rev(char *s);
 
+5-rev_string.c > is a cource cod of a function that reverses a string.
+- Prototype: void rev_string(char *s);
+
