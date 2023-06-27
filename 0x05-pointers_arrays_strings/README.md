@@ -12,3 +12,6 @@ Dscription of the files in this directory
 2-strlen.c > is a cource cod of a function that returns the length of a string.
 - Prototype: int _strlen(char *s);
 
+3-puts.c > is a cource cod of a function that prints a string, followed by a new line, to stdout.
+- Prototype: void _puts(char *str);
+
