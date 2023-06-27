@@ -15,3 +15,6 @@ Dscription of the files in this directory
 3-puts.c > is a cource cod of a function that prints a string, followed by a new line, to stdout.
 - Prototype: void _puts(char *str);
 
+4-print_rev.c > is a cource cod of a function that prints a string, in reverse, followed by a new line.
+- Prototype: void print_rev(char *s);
+
