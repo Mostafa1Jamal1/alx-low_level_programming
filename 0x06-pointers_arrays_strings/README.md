@@ -19,3 +19,7 @@ Let us start:
 2-strncpy.c > is a source code of a function that copies a string.
 - Prototype: char *_strncpy(char *dest, char *src, int n);
 - Your function should work exactly like strncpy ( a similar function in The standard library)
+
+3-strcmp.c > is a source code of a function that compares two strings.
+- Prototype: int _strcmp(char *s1, char *s2);
+- Your function should work exactly like strcmp
