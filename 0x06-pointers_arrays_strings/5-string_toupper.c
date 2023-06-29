@@ -5,7 +5,7 @@
  * of a string to uppercase.
  *
  * @str: the string to change
- * 
+ *
  * Return: the string after changing
 */
 
