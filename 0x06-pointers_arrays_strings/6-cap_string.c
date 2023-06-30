@@ -6,7 +6,7 @@
  * Return: 1 if c is lowercase
  * on error, 0 is returned
  */
-int _islower(char c)
+int isLower(char c)
 {
 	if ('z' >= c && c >= 'a')
 		return (1);
@@ -47,7 +47,7 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != 0; i++)
 	{
-		if (_islower(str[i]))
+		if (isLower(str[i]))
 		{
 			if (isseparator(str[i - 1]))
 			str[i] = str[i] - ('a' - 'A');
