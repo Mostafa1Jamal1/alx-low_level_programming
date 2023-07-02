@@ -14,9 +14,9 @@
 
 int main(void)
 {
-	unsigned long x = 1;
-	unsigned long y = 2;
-	unsigned long t;
+	long double x = 1;
+	long double y = 2;
+	long double t;
 	int num_fib = 98;
 	int i;
 
@@ -24,9 +24,9 @@ int main(void)
 	{
 		if (x == 1)
 		{
-			printf("%lu, ", x);
+			printf("%.0Lf, ", x);
 		}
-		printf("%lu", y);
+		printf("%.0Lf", y);
 		if (i != num_fib)
 			printf(", ");
 		t = y;
