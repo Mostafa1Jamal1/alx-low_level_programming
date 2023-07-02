@@ -37,7 +37,7 @@ int main(void)
 			printf("%ld", curr1);
 			printf("%015ld", curr2);
 		}
-		if (curr1 = 0)
+		if (curr1 == 0)
 			printf("%ld", curr2);
 		if (i < (fib_num - 1))
 			printf(", ");
