@@ -14,7 +14,7 @@
 
 int main(void)
 {
-	long max = 10000000000000; /** 13 zeros*/
+	long max = 10000000000000000; /** 16 zeros*/
 	long prev1 = 0;
 	long prev2 = 1;
 	long curr1 = 0;
