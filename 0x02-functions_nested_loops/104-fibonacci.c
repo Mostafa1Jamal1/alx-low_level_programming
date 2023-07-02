@@ -14,13 +14,10 @@
 
 int main(void)
 {
-	long max = 10000000000000000; /** 16 zeros*/
-	long prev1 = 0;
+	long max = 1000000000000000; /** 15 zeros*/
+	long prev1, curr1, sum1, sum2 = 0;
 	long prev2 = 1;
-	long curr1 = 0;
 	long curr2 = 2;
-	long sum1 = 0;
-	long sum2 = 0;
 	int fib_num = 98;
 	int i;
 
@@ -36,8 +33,12 @@ int main(void)
 		curr1 = sum1;
 		curr2 = sum2;
 		if (curr1 != 0)
+		{
 			printf("%ld", curr1);
-		printf("%ld", curr2);
+			printf("%015ld", curr2);
+		}
+		if (curr1 = 0)
+			printf("%ld", curr2);
 		if (i < (fib_num - 1))
 			printf(", ");
 	}
