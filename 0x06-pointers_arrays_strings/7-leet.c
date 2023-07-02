@@ -17,19 +17,19 @@
  * Return: the string pointer after encoding
 */
 
-char *leet(char *str)
+char *leet(char *s)
 {
 	char num[] = "4433007711";
 	char letters[] = "AaEeOoTtLl";
 	int i, j;
 
-	for (i = 0; str[i] != 0; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (str[i] == letters[j])
-				str[i] = num[j];
+			if (s[i] == letters[j])
+				s[i] = num[j];
 		}
 	}
-	return (str);
+	return (s);
 }
