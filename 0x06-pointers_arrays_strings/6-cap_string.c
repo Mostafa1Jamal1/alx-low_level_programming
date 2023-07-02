@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - is a function that checks for lowercase character.
+ * isLower - is a function that checks for lowercase character.
  *
  * @c: The character to check
  * Return: 1 if c is lowercase
@@ -14,7 +14,7 @@ int isLower(char c)
 		return (0);
 }
 /**
- * isseparator - is a function that checks for separators
+ * isSeparator - is a function that checks for separators
  * space, tabulation, new line, ,, ;, ., !, ?, ", (, ), {, and }
  *
  * @c: The character to check
@@ -22,13 +22,14 @@ int isLower(char c)
  * Return: 1 if c is a separators
  * on error, 0 is returned
 */
-int isseparator(char c)
+int isSeparator(char c)
 {
-	char sep[] = " \t\n,;.!?\"(){}";
-	int i;
+	char sep[] = {' ', '\t', '\n', ',', ';', '.',
+	 '!', '?', '\"', '(', ')', '{', '}'};
+	int subi;
 
-	for (i = 0; i < 13; i++)
-		if (c == sep[i])
+	for (subi = 0; subi < 13; subi++)
+		if (c == sep[subi])
 			return (1);
 	return (0);
 }
@@ -43,13 +44,13 @@ int isseparator(char c)
 */
 char *cap_string(char *str)
 {
-	int i = 0;
+	int i;
 
-	for (i = 0; str[i] != 0; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (isLower(str[i]))
 		{
-			if (isseparator(str[i - 1]))
+			if (isSeparator(str[i - 1]))
 			str[i] = str[i] - ('a' - 'A');
 		}
 	}
