@@ -23,8 +23,8 @@ int main()
 	long sum2 = 0;
 	int fib_num = 70;
 	int i;
-	printf("%d, ", prev2);
-	printf("%d, ", curr2);
+	printf("%ld, ", prev2);
+	printf("%ld, ", curr2);
 	for (i = 2; i < fib_num; i++)
 	{
 		sum2 = curr2 + prev2;
@@ -35,8 +35,8 @@ int main()
 		curr1 = sum1;
 		curr2 = sum2;
 		if (curr1 != 0)
-			printf("%d",curr1);
-		printf("%d",curr2);
+			printf("%ld",curr1);
+		printf("%ld",curr2);
 		if (i < (fib_num - 1))
 			printf(", ");
 	}
