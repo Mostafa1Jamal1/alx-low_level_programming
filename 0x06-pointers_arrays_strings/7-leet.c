@@ -2,10 +2,6 @@
 
 /**
  * leet - encodes a string into 1337.
- * only use one (IF) in your code
- * only use two loops in your code
- * not allowed to use switch
- * not allowed to use any ternary operation
  *
  * @s: the string to encode
  *
