@@ -19,17 +19,15 @@
 
 char *leet(char *str)
 {
-	char num[] = "43071";
-	char caps[] = "AEOTL";
-	char smalls[] = "aeotl";
-	int i;
-	int j;
+	char num[] = "4433007711";
+	char letters[] = "AaEeOoTtLl";
+	int i, j;
 
 	for (i = 0; str[i] != 0; i++)
 	{
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if (str[i] == caps[j] || str[i] == smalls[j])
+			if (str[i] == letters[j])
 				str[i] = num[j];
 		}
 	}
