@@ -12,7 +12,7 @@
  * Return: 0 (Success)
  */
 
-int main()
+int main(void)
 {
 	long max = 1000000000000000; /** 15 zeros*/
 	long prev1 = 0;
@@ -21,8 +21,9 @@ int main()
 	long curr2 = 2;
 	long sum1 = 0;
 	long sum2 = 0;
-	int fib_num = 70;
+	int fib_num = 98;
 	int i;
+
 	printf("%ld, ", prev2);
 	printf("%ld, ", curr2);
 	for (i = 2; i < fib_num; i++)
@@ -35,11 +36,11 @@ int main()
 		curr1 = sum1;
 		curr2 = sum2;
 		if (curr1 != 0)
-			printf("%ld",curr1);
-		printf("%ld",curr2);
+			printf("%ld", curr1);
+		printf("%ld", curr2);
 		if (i < (fib_num - 1))
 			printf(", ");
 	}
 	printf("\n");
-	return 0;
+	return (0);
 }
