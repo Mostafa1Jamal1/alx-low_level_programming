@@ -11,3 +11,8 @@ main.h > is the header file for all the functions in this directory.
 - The _memset() function fills the first n bytes of the memory area pointed to by s with the constant byte b
 - Returns a pointer to the memory area s
 
+1-memcpy.c  > is a source code for a function that copies memory area.
+- Prototype: char *_memcpy(char *dest, char *src, unsigned int n);
+- The _memcpy() function copies n bytes from memory area src to memory area dest
+- Returns a pointer to dest
+
