@@ -11,16 +11,21 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int acclen;
+	unsigned int acclen = 0;
 	unsigned int len;
 	unsigned int i;
 
-	for (acclen = 0; *(accept + acclen) != 0; acclen++)
-	{}
+	while (*(accept + acclen) != 0)
+	{
+		acclen++;
+	}
 	for (len = 0; *(s + len) != 0; len++)
 	{
-		for (i = 0; *(accept + i) != *(s + len) && i < acclen; i++)
-		{}
+		i = 0;
+		while (*(accept + i) != *(s + len) && i < acclen)
+		{
+			i++;
+		}
 		if (i >= acclen)
 			return (len);
 	}
