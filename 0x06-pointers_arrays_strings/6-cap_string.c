@@ -50,8 +50,10 @@ char *cap_string(char *str)
 	{
 		if (isLower(str[i]))
 		{
+			if (i == 0)
+				str[i] = str[i] - ('a' - 'A');
 			if (isSeparator(str[i - 1]))
-			str[i] = str[i] - ('a' - 'A');
+				str[i] = str[i] - ('a' - 'A');
 		}
 	}
 	return (str);
