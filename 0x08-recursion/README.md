@@ -14,3 +14,6 @@ main.h > is the header file for all the functions in this directory.
 1-print_rev_recursion.c > is a source code for a function that prints a string in reverse.
 - Prototype: void _print_rev_recursion(char *s);
 
+2-strlen_recursion.c > is a source code for a function that returns the length of a string.
+- Prototype: int _strlen_recursion(char *s);
+
