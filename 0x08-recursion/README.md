@@ -22,3 +22,7 @@ main.h > is the header file for all the functions in this directory.
 - If n is lower than 0, the function should return -1 to indicate an error
 - Factorial of 0 is 1
 
+4-pow_recursion.c > is a source code for a function that returns the value of x raised to the power of y.
+- Prototype: int _pow_recursion(int x, int y);
+- If y is lower than 0, the function should return -1
+
