@@ -8,7 +8,7 @@
  * If n does not have a natural square root, the function should return -1
  */
 
-int sr(int n, int x)
+long sr(long n, long x)
 {
 	if (x <= 1)
 		return (-1);
@@ -46,5 +46,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 0 || n == 1)
 		return (n);
-	return (sr(n, (n / 2)));
+	return ((int)sr((long)n, (long)(n / 2)));
 }
