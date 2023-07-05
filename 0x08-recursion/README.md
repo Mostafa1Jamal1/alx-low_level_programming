@@ -17,3 +17,8 @@ main.h > is the header file for all the functions in this directory.
 2-strlen_recursion.c > is a source code for a function that returns the length of a string.
 - Prototype: int _strlen_recursion(char *s);
 
+3-factorial.c > is a source code for a function that returns the factorial of a given number.
+- Prototype: int factorial(int n);
+- If n is lower than 0, the function should return -1 to indicate an error
+- Factorial of 0 is 1
+
