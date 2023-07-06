@@ -1,8 +1,8 @@
 /**
  * movetochar - skip star till char
- * 
+ *
  * @s: a pointer to char star
- * 
+ *
  * Return: a pointer to the next not star char
  * null considered not star char
  */
@@ -16,23 +16,23 @@ char *movetochar(char *s)
 }
 
 /**
- * cmptillmatch - compare till matching
+ * cmptilllastmatch - compare till matching
  *
- * @c1: a pointer to the char to match to
- * @c2: a pointer to the char skipped till matching
+ * @c1: a pointer to the char skipped till matching
+ * @c2: a pointer to the char to match to
  *
  * Return: the position of the matching char starting from 1
  * if reached the end of c2 and no matching return the length of c2
  */
 
-int cmptillmatch(char *c1, char *c2)
+int cmptilllastmatch(char *c1, char *c2)
 {
 	if (*c1 == *c2)
 		return (1);
-	if (*c2 == 0)
+	if (*c1 == 0)
 		return (0);
 	if (*c1 != *c2)
-		return (1 + cmptillmatch(c1, c2 + 1));
+		return (1 + cmptilllastmatch(c1 + 1, c2));
 	return (0);
 }
 
@@ -54,7 +54,7 @@ int wildcmp(char *s1, char *s2)
 	if (*s2 == '*')
 	{
 		s2 = movetochar(s2);
-		i = cmptillmatch(s2, s1);
+		i = cmptilllastmatch(s1, s2);
 		s1 = s1 + (i - 1);
 	}
 	if (*s1 == 0 && *s2 == 0)
