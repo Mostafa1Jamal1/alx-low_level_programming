@@ -26,20 +26,20 @@ char *movetochar(char *s)
 
 int cmptilllastmatch(char *c1, char *c2)
 {
-    int x;
+	int x;
 
-    if (*c1 == 0)
+	if (*c1 == 0)
 		return (1);
-    if (*c1 != *c2)
+	if (*c1 != *c2)
 		return (1 + cmptilllastmatch(c1 + 1, c2));
-    if (*c1 == *c2)
-    {
-        x = cmptilllastmatch(c1 + 1, c2);
-        if (*(c1 + x) == 0)
-		    return (1);
-        else
-            return (x + 1);
-    }
+	if (*c1 == *c2)
+	{
+		x = cmptilllastmatch(c1 + 1, c2);
+		if (*(c1 + x) == 0)
+			return (1);
+		else
+			return (x + 1);
+	}
 	return (1);
 }
 
@@ -56,6 +56,7 @@ int cmptilllastmatch(char *c1, char *c2)
 int wildcmp(char *s1, char *s2)
 {
 	int i;
+
 	if (*s2 == '*')
 	{
 		s2 = movetochar(s2);
