@@ -47,5 +47,11 @@ Let us start:
 - You are not allowed to use switch
 - You are not allowed to use any ternary operation
 
+100-rot13.c > is a source code of a function that encodes a string using rot13.
+- Prototype: char *rot13(char *);
+- You can only use if statement once in your code
+- You can only use two loops in your code
+- You are not allowed to use switch
+- You are not allowed to use any ternary operation
 
 102-magic.c > is is a source code of a program that demostrate how we can manipulate data in memory with pointers and addresses in a indirect way.
