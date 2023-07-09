@@ -10,7 +10,8 @@
 
 int _atoi(char *s)
 {
-	int dashc = 0, num = 0;
+	int dashc = 0;
+	unsigned int num = 0;
 
 	while (*s != 0)
 	{
