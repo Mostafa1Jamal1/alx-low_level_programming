@@ -14,9 +14,15 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *str;
+	char *str, *Nul;
 	int s1count = 0, s2count = 0, i, j;
+	char nulll = 0;
 
+	Nul = &nulll;
+	if (s1 == 0)
+		s1 = Nul;
+	if (s2 == 0)
+		s2 = Nul;
 	while (*(s1 + s1count))
 		s1count++;
 	while (*(s2 + s2count))
