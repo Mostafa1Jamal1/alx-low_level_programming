@@ -1,5 +1,5 @@
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * argstostr - concatenates all the arguments of your program
  * Each argument should be followed by a \n in the new string
@@ -20,6 +20,7 @@ char *argstostr(int ac, char **av)
 	size = malloc(ac * sizeof(int));
 	if (size == 0)
 		return (0);
+	printf("ac = %d\n", ac);
 	for (i = 0; i < ac; i++)
 	{
 		j = 0;
@@ -27,8 +28,9 @@ char *argstostr(int ac, char **av)
 			j++;
 		size[i] = j;
 		tsize += j;
+		printf("size[%d] = %d\ntsize = %d\n", i, size[i], tsize);
 	}
-	s = malloc(tsize + (ac * sizeof('\n')));
+	s = malloc(tsize);
 	if (s == 0)
 		return (0);
 	str = s;
