@@ -15,6 +15,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	void *ptr;
 	char *cptr;
 
+	if (nmemb <= 0)
+		return (0);
 /* check if size = 0 and return 0 when true*/
 	if (size <= 0)
 		return (0);
