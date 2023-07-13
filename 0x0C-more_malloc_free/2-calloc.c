@@ -14,7 +14,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i;
 	char *ptr;
 
-	if (size == 0)  /* check if size = 0 and return 0 when true*/
+/* check if size = 0 and return 0 when true*/
+	if (size == 0)
 		return (0);
 	ptr = malloc(nmemb * size); /* Allocating */
 	if (ptr == 0)
