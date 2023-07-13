@@ -28,6 +28,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int s1len, s2len, i;
 	char *str;
 
+	if (s1 == 0)
+		s1 = "";
+	if (s2 == 0)
+		s2 = "";
 	s1len = _strlen(s1);    /*get the length of s1*/
 	s2len = _strlen(s2);    /*get the length of s2*/
 	if (n >= s2len)
