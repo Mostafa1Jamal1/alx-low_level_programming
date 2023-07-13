@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s2len = _strlen(s2);    /*get the length of s2*/
 	if (n >= s2len)
 	{   /* Allocating only the necessary space */
-		str = malloc(s1len + s2len + 1);
+		str = malloc(s1len + s2len);
 		if (str == 0)
 			return (0);
 		/* copying s1 to str */
@@ -47,7 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 	{
 		/* Allocating only the necessary space */
-		str = malloc(s1len + n + 1);
+		str = malloc(s1len + n);
 		if (str == 0)
 			return (0);
 		/* copying s1 to str */
