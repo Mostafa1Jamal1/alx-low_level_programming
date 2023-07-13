@@ -34,34 +34,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	s1len = _strlen(s1);    /*get the length of s1*/
 	s2len = _strlen(s2);    /*get the length of s2*/
-	if (n >= s2len)
-	{   /* Allocating only the necessary space */
-		str = malloc(s1len + s2len + 1);
-		if (str == 0)
-			return (0);
-		/* copying s1 to str */
-		for (i = 0; *(s1 + i) != 0; i++)
-			*(str + i) = *(s1 + i);
-		/* copying s2 to str */
-		for (i = 0; *(s2 + i) != 0; i++)
-			*(str + i + s1len) = *(s2 + i);
-		/* Adding a terminating NULL */
-		*(str + s1len + s2len) = 0;
-	}
-	else
-	{
-		/* Allocating only the necessary space */
-		str = malloc(s1len + n + 1);
-		if (str == 0)
-			return (0);
-		/* copying s1 to str */
-		for (i = 0; *(s1 + i) != 0; i++)
-			*(str + i) = *(s1 + i);
-		/* copying n chars from s2 to str */
-		for (i = 0; i < n; i++)
-			*(str + i + s1len) = *(s2 + i);
-		/* Adding a terminating NULL */
-		*(str + s1len + n) = 0;
-	}
+	/* check the value of n*/
+	if (n > s2len)
+		n = s2len;
+	/* Allocating only the necessary space */
+	str = malloc(s1len + n + 1);
+	if (str == 0)
+		return (0);
+	/* copying s1 to str */
+	for (i = 0; *(s1 + i) != 0; i++)
+		*(str + i) = *(s1 + i);
+	/* copying n chars from s2 to str */
+	for (i = 0; i < n; i++)
+		*(str + i + s1len) = *(s2 + i);
+	/* Adding a terminating NULL */
+	*(str + s1len + n) = 0;
+
 	return (str);
 }
