@@ -12,7 +12,7 @@
 
 void print_number(int n)
 {
-	int rev = 0;
+	unsigned int rev = 0;
 	/* when n = 0 not necessary to complete */
 	if (n == 0)
 	{
