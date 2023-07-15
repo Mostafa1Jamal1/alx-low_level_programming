@@ -12,15 +12,31 @@
 
 void print_number(int n)
 {
+	int rev = 0;
+	/* when n = 0 not necessary to complete */
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+	/* Dealing with negative numbers */
 	if (n < 0)
 	{
 		_putchar('-');
-		n = n * -1;
+		n *= -1;
 	}
-	if (n / 10 != 0)
+	/* Revrese the number */
+	while (n != 0)
 	{
-		print_number(n / 10);
+		rev += n % 10;
+		if ((n / 10) != 0)
+			rev *= 10;
+		n /= 10;
 	}
-	_putchar(n % 10 + '0');
-
+	/* Print in reverse */
+	while (rev != 0)
+	{
+		_putchar((rev % 10) + '0');
+		rev /= 10;
+	}
 }

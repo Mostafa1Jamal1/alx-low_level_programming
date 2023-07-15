@@ -1,5 +1,6 @@
-# This is a description of all the files in this directory <0x04-more_functions_nested_loops> 
-All this tasks are to ensure the understanding of the functions and nested loops in c
+# This is a description of all the files in this directory <0x04-more_functions_nested_loops> #
+## All this tasks are to ensure the understanding of functions and nested loops in c ##
+### All the main.c files are testing program to the functions ###
 
 main.h > is a header file that contains all the prototypes of the functions created.
 
@@ -71,4 +72,3 @@ And showed no errors
 - You are not allowed to use long
 - You are not allowed to use arrays or pointers
 - You are not allowed to hard-code special values
-
