@@ -12,22 +12,24 @@
 
 void print_number(int n)
 {
-	int dev = 1;
+	unsigned int npos, dev = 1;
 
 	/* Dealing with negative numbers */
 	if (n < 0)
 	{
 		_putchar('-');
-		dev = -1;
+		npos = -n;
 	}
+	else
+		npos = n;
 	/* Count how many digits */
-	while (n / dev >= 10)
+	while (npos / dev >= 10)
 		dev *= 10;
 	/* Print from biggest place */
 	while (dev != 0)
 	{
-		_putchar((n / dev) + '0');
-		n %= dev;
+		_putchar((npos / dev) + '0');
+		npos %= dev;
 		dev /= 10;
 	}
 }
