@@ -7,3 +7,6 @@ Let us start:
 - name, type = char *
 - age, type = float
 - owner, type = char *
+
+`1-init_dog.c` > is a source code of a function that initialize a variable of type struct dog
+- Prototype: void init_dog(struct dog *d, char *name, float age, char *owner);
