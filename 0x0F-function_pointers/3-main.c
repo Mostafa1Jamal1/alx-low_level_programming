@@ -10,7 +10,7 @@
 */
 int main(int argc, char **argv)
 {
-	int num1, num2;
+	int num1, num2, ans;
 	int (*ptr_fun)(int, int);
 
 	if (argc != 4)
@@ -26,11 +26,7 @@ int main(int argc, char **argv)
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	if (num2 == 0 && (ptr_fun == op_div || ptr_fun == op_mod))
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	printf("%d\n", ptr_fun(num1, num2));
+	ans = ptr_fun(num1, num2);
+	printf("%d\n", ans);
 	return (0);
 }
