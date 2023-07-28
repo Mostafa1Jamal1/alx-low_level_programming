@@ -19,6 +19,9 @@ Let us start:
 - `str` needs to be duplicated
 
 `3-add_node_end.c` > is a source code file for a function that adds a new node at the end of a list_t list.
-- Prototype: list_t *add_node_end(list_t **head, const char *str);
-- Return: the address of the new element, or NULL if it failed
-- str needs to be duplicated
+- Prototype: `list_t *add_node_end(list_t **head, const char *str);`
+- Return: the address of the new element, or `NULL` if it failed
+- `str` needs to be duplicated
+
+`4-free_list.c` > is a source code file for a function that frees a `list_t` list.
+Prototype: `void free_list(list_t *head);`
