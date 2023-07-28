@@ -25,3 +25,5 @@ Let us start:
 
 `4-free_list.c` > is a source code file for a function that frees a `list_t` list.
 Prototype: `void free_list(list_t *head);`
+
+`100-first.c` > is a source code file for a function that prints `You're beat! and yet, you must allow,\nI bore my house upon my back!\n` before the main function is executed.
