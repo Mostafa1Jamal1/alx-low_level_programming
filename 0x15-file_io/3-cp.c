@@ -8,7 +8,7 @@
 
 int main(int argc, char **argv)
 {
-	int fdfrom, fdto, readnum, writenum, c;
+	int fdfrom, fdto, readnum = 1024, writenum, c;
 	char buf[1024];
 	mode_t oldmask = umask(0);
 	/* Check number of arguments */
@@ -23,14 +23,16 @@ int main(int argc, char **argv)
 	umask(oldmask);
 	if (fdto == -1)
 		exitwith99(argv[2]);
-	/* Read the file to copy from and check */
-	readnum = read(fdfrom, buf, 1024);
-	if (readnum == -1)
-		exitwith98(argv[1]);
-	/* Write to the new file and check */
-	writenum = write(fdto, buf, readnum);
-	if (writenum == -1)
-		exitwith99(argv[2]);
+	while (readnum == 1024)
+	{	/* Read the file to copy from and check */
+		readnum = read(fdfrom, buf, 1024);
+		if (readnum == -1)
+			exitwith98(argv[1]);
+		/* Write to the new file and check */
+		writenum = write(fdto, buf, readnum);
+		if (writenum == -1)
+			exitwith99(argv[2]);
+	}
 	/* Close and check close */
 	c = close(fdfrom);
 	if (c == -1)
