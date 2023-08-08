@@ -10,6 +10,7 @@ int main(int argc, char **argv)
 {
 	int fdfrom, fdto, readnum;
 	char buf[1024];
+	mode_t oldmask = umask(0);
 	/* Check number of arguments */
 	if (argc != 3)
 		exitwith97();
@@ -18,8 +19,8 @@ int main(int argc, char **argv)
 	if (fdfrom == -1)
 		exitwith98(argv[1]);
 	/* Open and check open for the file to write (copy to) */
-	fdto = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT,
-				S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fdto = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	umask(oldmask);
 	if (fdto == -1)
 		exitwith99(argv[2]);
 	/* Read the file to copy from and check */
