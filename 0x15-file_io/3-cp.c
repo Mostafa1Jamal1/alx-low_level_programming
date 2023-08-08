@@ -29,9 +29,11 @@ int main(int argc, char **argv)
 		exitwith98(argv[1]);
 	writenum = write(fdto, buf, readnum);
 	if (writenum == -1)
-		exitwith99;
-	if (close(fdfrom) == -1 || close(fdto) == -1)
-		exitwith100;
+		exitwith99(argv[2]);
+	if (close(fdfrom) == -1)
+		exitwith100(fdfrom);
+	if (close(fdto) == -1)
+		exitwith100(fdto);
 	return (0);
 }
 
