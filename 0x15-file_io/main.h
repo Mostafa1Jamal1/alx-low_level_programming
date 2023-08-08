@@ -16,4 +16,9 @@ int create_file(const char *filename, char *text_content);
 
 int append_text_to_file(const char *filename, char *text_content);
 
+void exitwith97(void);
+void exitwith98(char *str);
+void exitwith99(char *str);
+void exitwith100(int fd);
+
 #endif /* MAIN_H */
