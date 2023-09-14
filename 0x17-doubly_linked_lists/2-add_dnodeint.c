@@ -6,14 +6,21 @@
  * Return: the address of the new element, or NULL if it failed
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
-{
+{	/* Allocate memory for new node */
 	dlistint_t *new = malloc(sizeof(dlistint_t));
-
+	/* Check if allocation succeeded */
 	if (new == NULL)
 		return (NULL);
+	/* Assign the value to the node */
 	new->n = n;
 	new->prev = NULL;
-	new->next = *head;
-	*head = new;
+	/* Make the new node the head */
+	if (head)
+	{
+		new->next = *head;
+		*head = new;
+	}
+	else
+		new->next = NULL;
 	return (new);
 }
