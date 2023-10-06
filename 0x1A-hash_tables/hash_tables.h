@@ -2,7 +2,8 @@
 #define HASH_TABLES_H
 
 #include <stdio.h>
-#include <unitsd.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 
 /**
@@ -34,13 +35,14 @@ typedef struct hash_table_s
 	hash_node_t **array;
 } hash_table_t;
 
+/********************** Prototype of functions *********************/
+
+hash_table_t *hash_table_create(unsigned long int size);
 
 
 
 
 
-
-
-
+/*********************************************/
 
 #endif
