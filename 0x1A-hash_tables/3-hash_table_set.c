@@ -60,7 +60,7 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned int index = key_index((unsigned char *)key, ht->size);
+	unsigned long int index = key_index((unsigned char *)key, ht->size);
 	hash_node_t *new_node, *current = ht->array[index];
 	size_t val_len = (strlen(value) + 1);
 
