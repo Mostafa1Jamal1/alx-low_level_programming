@@ -65,7 +65,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	size_t val_len = (strlen(value) + 1);
 
 	/* key can not be an empty string */
-	if (strlen(key) == 0)
+	if (strlen(key) == 0 || key == NULL || value == NULL)
 		return (0);
 	/* Create a new node */
 	new_node = create_node(key, value);
