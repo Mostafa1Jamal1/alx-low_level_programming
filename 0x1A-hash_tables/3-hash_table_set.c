@@ -60,13 +60,18 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index = key_index((unsigned char *)key, ht->size);
-	hash_node_t *new_node, *current = ht->array[index];
-	size_t val_len = (strlen(value) + 1);
+	unsigned long int index;
+	hash_node_t *new_node, *current;
+	size_t val_len;
 
 	/* key can not be an empty string */
-	if (strlen(key) == 0 || key == NULL || value == NULL)
+	if (key == NULL || value == NULL)
 		return (0);
+	if (strlen(key) == 0)
+		return (0);
+	index = key_index((unsigned char *)key, ht->size);
+	current = ht->array[index];
+	val_len = (strlen(value) + 1);
 	/* Create a new node */
 	new_node = create_node(key, value);
 	if (new_node == NULL)
