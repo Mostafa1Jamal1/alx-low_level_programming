@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * create_node - create a hash table node
  * @key: the key of the node
@@ -61,43 +60,26 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *new_node, *current;
-	size_t val_len;
-
-	/* key can not be an empty string */
+	hash_node_t *current;
+	/* Validation of arguments */
 	if (key == NULL || value == NULL || ht == NULL)
 		return (0);
+	/* key can not be an empty string */
 	if (strlen(key) == 0)
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
 	current = ht->array[index];
-	val_len = (strlen(value) + 1);
-	/* Create a new node */
-	new_node = create_node(key, value);
-	if (new_node == NULL)
-		return (0);
-	/* adding new node if no collosion */
-	if (current == NULL)
+	
+	while (current != NULL)
 	{
-		ht->array[index] = new_node;
-		return (1);
-	}
-	else
-	{	/* Case if the key exists update the value */
 		if (strcmp(current->key, key) == 0)
-		{ /* If the value is the same -> do nothing */
-			if (strcmp(current->value, value) == 0)
-				return (1);
-			ht->array[index]->value = (char *)realloc(current->value, val_len);
-			if ((strcmp(current->value, value) == 0) || current->value == NULL)
-				return (0);
-			strcpy(ht->array[index]->value, value);
-			return (1);
-		} /* Collosion */
-		else
-		{ /* add the new node at the beginning of the list */
-			add_node(&ht->array[index], key, value);
+		{ /* Case if the key exists update the value */
+			free(current->value);
+			current->value = strdup(value);
+			return(1);
 		}
+		current = current->next;
 	}
+	add_node(&(ht->array[index]), key, value);
 	return (1);
 }
