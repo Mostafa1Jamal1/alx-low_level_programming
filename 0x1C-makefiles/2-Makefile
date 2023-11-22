@@ -6,5 +6,8 @@ OBJ = main.o school.o
 all: $(OBJ)
 	$(CC) $(OBJ) -o school
 
-%.o: %.c
+main.o: main.c
+	$(CC) -c -o $@ $?
+
+school.o: school.c
 	$(CC) -c -o $@ $?
