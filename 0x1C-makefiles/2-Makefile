@@ -4,7 +4,4 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o school
-
-%.o: %.c
-	$(CC) -c -o $@ $<
+	$(CC) $^ -o school
