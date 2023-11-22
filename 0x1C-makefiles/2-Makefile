@@ -1,7 +1,7 @@
 # name of the executable: school
 CC = gcc
-SRC = main.c school.c
+SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 
 all: $(OBJ)
-	$(CC) $^ -o school
+	$(CC) $(OBJ) -o school
