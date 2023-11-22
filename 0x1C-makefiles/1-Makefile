@@ -1,0 +1,5 @@
+# name of the executable: school
+CC = gcc
+SRC := $(wildcard *.c)
+all:
+	$(CC) $(SRC) -o school
