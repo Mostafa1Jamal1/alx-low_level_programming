@@ -12,10 +12,8 @@ clean:
 	$(RM) $(wildcard *~) $(NAME)
 
 oclean:
-	$(RM) *.o
+	$(RM) $(OBJ)
 
-fclean:
-	clean oclean
+fclean: clean oclean
 
-re:
-	fclean all
+re: oclean all
