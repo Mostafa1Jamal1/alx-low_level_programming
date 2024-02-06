@@ -26,3 +26,34 @@ Let us start:
 - `value` won’t appear more than once in `array`
 - If `value` is not present in `array` or if `array` is `NULL`, your function must return `-1`
 
+
+`2-O` -> contain the answer to this question:
+What is the time complexity (worst case) of a linear search in an array of size n?
+
+
+`3-O` -> contain the answer to this question:
+What is the space complexity (worst case) of an iterative linear search algorithm in an array of size n?
+
+
+`4-O` -> contain the answer to this question:
+What is the time complexity (worst case) of a binary search in an array of size n?
+
+
+`5-O` -> contain the answer to this question:
+What is the space complexity (worst case) of a binary search in an array of size n?
+
+
+`6-O` -> contain the answer to this question:
+What is the space complexity of this function / algorithm?
+`int **allocate_map(int n, int m)
+{
+     int **map;
+
+     map = malloc(sizeof(int *) * n);
+     for (size_t i = 0; i < n; i++)
+     {
+          map[i] = malloc(sizeof(int) * m);
+     }
+     return (map);
+}`
+
