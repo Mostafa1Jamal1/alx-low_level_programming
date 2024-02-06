@@ -50,7 +50,7 @@ int binary_search(int *array, size_t size, int value)
 
 		if (value < array[mean])
 			end = mean - 1;
-		else if ((value > array[mean]))
+		else if (value > array[mean])
 			start = mean + 1;
 		else
 			return (mean);
