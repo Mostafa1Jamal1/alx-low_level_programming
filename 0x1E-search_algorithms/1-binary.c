@@ -1,20 +1,21 @@
 #include "search_algos.h"
 
 /**
- * print_arr - prints araay
+ * print_arr_LR - prints array from L to R indexes
  *
  * @array: a pointer to the first element of the array
- * @size: is the number of elements in array
+ * @start: the start index
+ * @end: the end index
  */
 
-void print_arr(int *array, size_t size)
+void print_arr_LR(int *array, int start, int end)
 {
-	size_t i;
+	int i;
 
-	for (i = 0; i < size; i++)
+	for (i = start; i <= end; i++)
 	{
 		printf("%d", array[i]);
-		if (i == (size - 1))
+		if (i == end)
 			printf("\n");
 		else
 			printf(", ");
@@ -34,23 +35,25 @@ void print_arr(int *array, size_t size)
 
 int binary_search(int *array, size_t size, int value)
 {
-	int i = ((int)size - 1) / 2;
-	int ans;
+	int start = 0, end = (int)size - 1;
+	int mean;
 
 	if (!array || size == 0)
 		return (-1);
-	printf("Searching in array: ");
-	print_arr(array, size);
 
-	if (value == array[i])
-		return (i);
-	else if (value > array[i])
+	while (start <= end)
 	{
-		ans = binary_search((array + i + 1), (size - i - 1), value);
-		if (ans == -1)
-			return (ans);
-		return (i + 1 + ans);
+		printf("Searching in array: ");
+		print_arr_LR(array, start, end);
+
+		mean = (start + end) / 2;
+
+		if (value < array[mean])
+			end = mean - 1;
+		else if ((value > array[mean]))
+			start = mean + 1;
+		else
+			return (mean);
 	}
-	else
-		return (binary_search(array, i, value));
+	return (-1);
 }
