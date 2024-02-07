@@ -69,3 +69,6 @@ What is the space complexity of this function / algorithm?
 - If `value` is not present in `array` or if `array` is `NULL`, the function returns -1
 - The function use the sqrt() function included in <math.h> (don’t forget to compile with -lm)
 
+
+`101-O` -> contain the answer to this question:
+What is the time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)?
