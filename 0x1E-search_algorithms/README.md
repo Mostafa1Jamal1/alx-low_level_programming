@@ -72,3 +72,16 @@ What is the space complexity of this function / algorithm?
 
 `101-O` -> contain the answer to this question:
 What is the time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)?
+
+
+`102-interpolation.c` -> a function that searches for a value in a sorted array of integers using the Interpolation search algorithm
+
+- Prototype : `int interpolation_search(int *array, size_t size, int value);`
+- Where `array` is a pointer to the first element of the array to search in
+- `size` is the number of elements in array
+- And `value` is the value to search for
+- The function must return the first index where `value` is located
+- `array` must be sorted in ascending order
+- If `value` is not present in `array` or if `array` is `NULL`, the function returns -1
+- To determine the probe position, we use : `size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]))`
+
