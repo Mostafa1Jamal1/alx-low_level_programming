@@ -9,12 +9,12 @@ def island_perimeter(grid):
     for row, IntList in enumerate(grid):
         for col, zone in enumerate(IntList):
             if zone == 1:
-                if grid[row][col - 1] == 0:
+                if col == 0 or grid[row][col - 1] == 0:
                     perimeter += 1
-                if grid[row][col + 1] == 0:
+                if col == len(IntList) or grid[row][col + 1] == 0:
                     perimeter += 1
-                if grid[row - 1][col] == 0:
+                if row == 0 or grid[row - 1][col] == 0:
                     perimeter += 1
-                if grid[row + 1][col] == 0:
+                if row == len(grid) or grid[row + 1][col] == 0:
                     perimeter += 1
     return perimeter
